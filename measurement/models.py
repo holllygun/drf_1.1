@@ -7,7 +7,7 @@ class Sensor(models.Model):
 
 
 class Measurement(models.Model):
-    sensor = models.ForeignKey(Sensor, on_delete=models.CASCADE, related_name='names',)
+    sensor = models.ForeignKey(Sensor, on_delete=models.CASCADE, related_name='measurements',)
     temperature = models.DecimalField(max_digits=5, decimal_places=2, verbose_name='Температура при измерении')
     datetime = models.DateField(auto_now_add=True, verbose_name='Дата и время измерения')
 
